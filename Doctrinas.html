@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Tiempo - Doctrinas Cristianas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<style>
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 800px;
+    gap: 1rem;
+}
+
+.event {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+</style>
+    <header>
+        <h1>Doctrinas Fundamentales de la Fe Cristiana</h1>
+        <nav>
+            <ul>
+                <li><a href="#timeline">Línea de Tiempo</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#accessibility">Accesibilidad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="timeline">
+            <h2>Línea de Tiempo</h2>
+            <div class="timeline">
+                <div class="event">
+                    <h3>La Trinidad</h3>
+                    <p>Mateo 28:19, 2 Corintios 13:14</p>
+                </div>
+                <div class="event">
+                    <h3>La Deidad de Jesucristo</h3>
+                    <p>Juan 1:1-14, Colosenses 2:9</p>
+                </div>
+                <!-- Agrega más eventos aquí -->
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Acerca de</h2>
+            <p>Este proyecto ilustra las doctrinas fundamentales de la fe cristiana utilizando una línea de tiempo interactiva.</p>
+        </section>
+
+        <section id="accessibility">
+            <h2>Accesibilidad</h2>
+            <div class="controls">
+                <label for="font-size">Tamaño de fuente:</label>
+                <input type="range" id="font-size" min="12" max="24" value="16">
+
+                <label for="font-family">Tipo de fuente:</label>
+                <select id="font-family">
+                    <option value="Arial">Arial</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Courier New">Courier New</option>
+                </select>
+
+                <label for="bg-color">Color de fondo:</label>
+                <input type="color" id="bg-color" value="#ffffff">
+
+                <label for="text-color">Color de texto:</label>
+                <input type="color" id="text-color" value="#000000">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Doctrinas Cristianas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+	<script>
+	// script.js
+
+document.addEventListener("DOMContentLoaded", () => {
+    const fontSizeInput = document.getElementById("font-size");
+    const fontFamilySelect = document.getElementById("font-family");
+    const bgColorInput = document.getElementById("bg-color");
+    const textColorInput = document.getElementById("text-color");
+    const body = document.body;
+
+    // Cambiar tamaño de fuente
+    fontSizeInput.addEventListener("input", () => {
+        body.style.fontSize = `${fontSizeInput.value}px`;
+    });
+
+    // Cambiar tipo de fuente
+    fontFamilySelect.addEventListener("change", () => {
+        body.style.fontFamily = fontFamilySelect.value;
+    });
+
+    // Cambiar color de fondo
+    bgColorInput.addEventListener("input", () => {
+        body.style.backgroundColor = bgColorInput.value;
+    });
+
+    // Cambiar color de texto
+    textColorInput.addEventListener("input", () => {
+        body.style.color = textColorInput.value;
+    });
+});
+
+	</script>
+</body>
+</html>
